@@ -1,5 +1,6 @@
+substitutions:
+ _GO_PATH: "src/desafio-ci"
 steps:
- _GO_PATH: src/desafio-ci
 - id: "GO Install"
   name: 'gcr.io/cloud-builder/go'
   args: ['install', '.']
