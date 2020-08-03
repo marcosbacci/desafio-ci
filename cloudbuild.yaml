@@ -2,8 +2,6 @@ steps:
 - id: "GO Install"
   name: 'gcr.io/cloud-builders/go'
   args: ['install', '.']
-  env: ['PROJECT_ROOT=soma']
-  env: ['GOPATH=src/soma']
 
 - id: "Executar o teste unitário"
   name: 'gcr.io/cloud-builders/go'
