@@ -1,0 +1,16 @@
+steps:
+ _GO_PATH: "src/desafio-ci"
+- id: "GO Install"
+  name: 'gcr.io/cloud-builder/go'
+  args: ['install', '.']
+  env: ['PROJECT_ROOT=${_GO_PATH}']
+
+- id: "Executar o teste unitário"
+  name: 'gcr.io/cloud-builders/go'
+  args: ['test','${_GO_PATH}']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--tag=gcr.io/$PROJECT_ID/desafio-ci', '.']
+
+images:
+- 'gcr.io/$PROJECT_ID/desafio-ci'
