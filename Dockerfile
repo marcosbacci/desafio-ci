@@ -1,10 +1,5 @@
-FROM golang:1.14
+FROM scratch
 
-WORKDIR /go/src/app
+COPY bin/soma /soma
 
-COPY *.go .
-
-RUN go get -d -v
-RUN go install -v
-
-CMD ["app"]
+ENTRYPOINT ["/soma"]
