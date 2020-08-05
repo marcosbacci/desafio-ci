@@ -9,9 +9,6 @@ steps:
   args: ['test','soma']
   env: ['GOPATH=.']
 
-- id: "Caminho"
-  args: ['ls']
-
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '--tag=gcr.io/$PROJECT_ID/soma', '.']
 
