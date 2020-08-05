@@ -10,7 +10,6 @@ steps:
   env: ['GOPATH=.']
 
 - id: "Caminho"
-  name: 'gcr.io/cloud-builders/go'
   args: ['ls']
 
 - name: 'gcr.io/cloud-builders/docker'
